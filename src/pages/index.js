@@ -4,7 +4,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { SliceZone } from '@prismicio/react'
 
-import { Layout } from '../components/Layout'
+import { Layout } from '@components/Layout'
 import { Seo } from '../components/Seo'
 import { HomepageBanner } from '../components/HomepageBanner'
 import { components } from '../slices'

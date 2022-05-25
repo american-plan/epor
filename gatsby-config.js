@@ -1,5 +1,4 @@
-// gatsby-config.js file
-
+const path = require('path');
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -43,5 +42,20 @@ module.exports = {
         fonts: [`Lato\:400,400,700,700i,900`, `Amiri\:400,400,700,700i`],
       },
     },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@images': path.resolve(__dirname, 'src/images'),
+          '@styles': path.resolve(__dirname, 'src/styles'),
+          '@pages': path.resolve(__dirname, 'src/pages'),
+          '@hooks': path.resolve(__dirname, 'src/hooks'),
+        },
+        extensions: [
+          "js", "jsx", "css", "sass",
+        ]
+      }
+    }
   ],
 }
