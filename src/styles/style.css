@@ -84,17 +84,34 @@ footer {
   line-height: 70px;
 }
 
+.card {
+  text-align: left;
+}
+
+.group {
+  text-align: right;
+}
+
+.retangle{
+  height: 5px;
+  width: 242px;
+  border: 1px white;
+  background: #ff4500;
+}
+
 .banner-button {
-  background: #ffffff;
+  background: #F44500;
   border-radius: 7px;
-  color: #484d52;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 700;
-  padding: 15px 40px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  position:relative;
 }
 
 .banner-button:hover {
-  background: #c8c9cb;
+  background: #cbc9c8;
 }
 
 /* Text Sections */
