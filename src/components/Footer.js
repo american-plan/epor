@@ -1,18 +1,7 @@
-import * as React from 'react'
-
-import prismicLogo from '../images/logo-prismic.svg'
+import React from 'react';
 
 export const Footer = () => (
-  <footer>
-    <p>
-      Proudly published with{' '}
-      <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
-        Prismic
-      </a>
-      <br />
-      <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
-        <img className="footer-logo" src={prismicLogo} alt="Prismic logo" />
-      </a>
-    </p>
-  </footer>
-)
+    <footer>
+        <p>Copyright © {new Date().getFullYear()} American Plan. All rights</p>
+    </footer>
+);

@@ -5,7 +5,7 @@
         "@audio/*": ["./audio/*"],
         "@colors": ["./colors"],
         "@components/*": ["./components/*"],
-        "@styles": ["./styles"],
+        "@styles/*": ["./styles/*"],
         "@images": ["./images"],
         "@hooks": ["./hooks"],
       }
