@@ -1,5 +1,6 @@
 import React from 'react';
 import { PrismicLink } from '@prismicio/react';
+import Setup from './ContactModal';
 
 export const HomepageBanner = ({
     title,
@@ -17,7 +18,7 @@ export const HomepageBanner = ({
         <div>
             <section className="card">
                 <h4 className="title">End Poverty & Overcome Racism</h4>
-                <button className="banner-button">Join the Fight</button>
+                <Setup />
             </section>
             <section className="group">
                 <text>
