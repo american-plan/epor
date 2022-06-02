@@ -7,9 +7,9 @@ import './../styles/reset.css';
 import './../styles/common.css';
 import './../styles/style.css';
 
-export const Layout = ({ isHomepage, children, navigation }) => (
+export const Layout = ({ backgroundUrl, isHomepage, children, navigation }) => (
     <>
-        <StickyHeader />
+        <StickyHeader backgroundUrl={backgroundUrl} />
         {children}
         <Footer />
     </>

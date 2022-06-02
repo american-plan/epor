@@ -6,14 +6,13 @@ import { graphql } from 'gatsby';
 import { Layout } from '@components/Layout';
 import { Seo } from '@components/Seo';
 import { HomepageBanner } from '@components/HomepageBanner';
-import images from '@images';
 
 const HomeTemplate = ({ data }) => {
     if (!data) return null;
     const doc = data.prismicHomepage.data;
 
     return (
-        <Layout isHomepage>
+        <Layout isHomepage backgroundUrl={doc.banner_background.url}>
             <Seo title="Home" />
             <HomepageBanner
                 title={doc.banner_title.text}
