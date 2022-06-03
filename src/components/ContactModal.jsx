@@ -6,17 +6,17 @@ import { TextField } from '@mui/material';
 import { Typography } from '@mui/material';
 import { width } from '@mui/system';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-  };
+const styles = theme => ({
+    textField: {
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'white',
+        paddingBottom: 0,
+        marginTop: 0,
+        fontWeight: 500
+    },
+});
 
 const ContactModal = () => {
     const [open, setOpen] = useState(false);
@@ -27,7 +27,6 @@ const ContactModal = () => {
             <button className='banner-button' onClick={handleOpen}>Join the Fight</button>
             <Modal
                 open = {open}
-                onClose = {handleClose}
                 aria-describedby = "form"
             >
                 <Box 
@@ -42,20 +41,19 @@ const ContactModal = () => {
                         <Box sx={{
                             width: 427,
                             heigth: 636,
-                        }}></Box>
+                        }}>
+                        </Box>
+                        <button className='btn' onClick={handleClose} style={{fontSize:24}}>X</button>
                         <Box 
                             component="form"
                             sx={{
-                                '& .MuiTextField-root': { m : 3 },
+                                '& .MuiTextField-root':{m: 3},
 
                             }}
                             noValidate
                             autoComplete = "off">
                             <div id = "form">            
-                                <TextField sx={{
-                                    width: 230,
-                                    height: 32,
-                                }}
+                                <TextField 
                                     id= "outlined-first-name" label = "First Name*" type = "text" 
                                 />
                                 <TextField sx={{}}
