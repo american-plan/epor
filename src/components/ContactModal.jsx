@@ -3,8 +3,7 @@ import { deepMemo } from '@hooks';
 import { Modal } from '@mui/material';
 import {Box} from '@mui/material'
 import { TextField } from '@mui/material';
-import { Typography } from '@mui/material';
-import { width } from '@mui/system';
+import contactImg from './images/contat-modal.png'
 
 const styles = theme => ({
     textField: {
@@ -38,11 +37,7 @@ const ContactModal = () => {
                         top: "10%",
                         left: "15%",
                     }}>
-                        <Box sx={{
-                            width: 427,
-                            heigth: 636,
-                        }}>
-                        </Box>
+                        <img src={contactImg}/>
                         <button className='btn' onClick={handleClose} style={{fontSize:24}}>X</button>
                         <Box 
                             component="form"
@@ -52,21 +47,23 @@ const ContactModal = () => {
                             }}
                             noValidate
                             autoComplete = "off">
-                            <div id = "form">            
+                            <div id = "form">   
+                                <h1 style={{color: "orangered", 
+                                        fontFamily:"sans-serif" }}>It's your turn to take action</h1>         
                                 <TextField 
-                                    id= "outlined-first-name" label = "First Name*" type = "text" 
+                                    id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name'
                                 />
                                 <TextField sx={{}}
-                                    id = "outlined-last-name" label = "Last Name*" type = "text" 
+                                    id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name'
                                 />
                                 <TextField 
-                                    id = "outlined-email" label = "Email*" type = "text" 
+                                    id = "outlined-email" label = "Email*" type = "text" placeholder='Email'
                                 />
                                 <TextField 
-                                    id = "outlined-subjects" label = "Subjects" type = "text" 
+                                    id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects'
                                 />
                                 <TextField 
-                                    id = "outlined-messages" label = "Messages" type = "text" 
+                                    id = "outlined-messages" label = "Messages" type = "text" placeholder='Messages' multiline rows={5}
                                 />
                             </div>
                         </Box>
