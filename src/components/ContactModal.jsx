@@ -4,6 +4,7 @@ import { Modal } from '@mui/material';
 import {Box} from '@mui/material'
 import { TextField } from '@mui/material';
 import { Typography } from '@mui/material';
+import { width } from '@mui/system';
 
 const style = {
     position: 'absolute',
@@ -25,61 +26,53 @@ const ContactModal = () => {
         <div>
             <button className='banner-button' onClick={handleOpen}>Join the Fight</button>
             <Modal
-                open={open}
-                onClose={handleClose}
-                aria-describedby="form"
+                open = {open}
+                onClose = {handleClose}
+                aria-describedby = "form"
             >
                 <Box 
-                    component="form"
-                    sx={{
-                        '& .MuiTextField-root': { m: 3, width: '25ch' },
-                    }}
-                    noValidate
-                    autoComplete="off">
-                    <div id = "form" sx={{ mt: 3 }}>
-                        <TextField
-                        required
-                        id="outlined-required"
-                        label="Required"
-                        defaultValue="Hello World"
-                        />
-                        <TextField
-                        disabled
-                        id="outlined-disabled"
-                        label="Disabled"
-                        defaultValue="Hello World"
-                        />
-                        <TextField
-                        id="outlined-password-input"
-                        label="Password"
-                        type="password"
-                        autoComplete="current-password"
-                        />
-                        <TextField
-                        id="outlined-read-only-input"
-                        label="Read Only"
-                        defaultValue="Hello World"
-                        InputProps={{
-                            readOnly: true,
-                        }}
-                        />
-                        <TextField
-                        id="outlined-number"
-                        label="Number"
-                        type="number"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        />
-                        <TextField id="outlined-search" label="Search field" type="search" />
-                        <TextField
-                        id="outlined-helperText"
-                        label="Helper text"
-                        defaultValue="Default Value"
-                        helperText="Some important text"
-                        />
-                    </div>
-                </Box>
+                    sx ={{
+                        bgcolor: "background.paper",
+                        width: 1075,
+                        height: 636,
+                        position: 'relative',
+                        top: "10%",
+                        left: "15%",
+                    }}>
+                        <Box sx={{
+                            width: 427,
+                            heigth: 636,
+                        }}></Box>
+                        <Box 
+                            component="form"
+                            sx={{
+                                '& .MuiTextField-root': { m : 3 },
+
+                            }}
+                            noValidate
+                            autoComplete = "off">
+                            <div id = "form">            
+                                <TextField sx={{
+                                    width: 230,
+                                    height: 32,
+                                }}
+                                    id= "outlined-first-name" label = "First Name*" type = "text" 
+                                />
+                                <TextField sx={{}}
+                                    id = "outlined-last-name" label = "Last Name*" type = "text" 
+                                />
+                                <TextField 
+                                    id = "outlined-email" label = "Email*" type = "text" 
+                                />
+                                <TextField 
+                                    id = "outlined-subjects" label = "Subjects" type = "text" 
+                                />
+                                <TextField 
+                                    id = "outlined-messages" label = "Messages" type = "text" 
+                                />
+                            </div>
+                        </Box>
+                    </Box>
             </Modal>
         </div>
     )
