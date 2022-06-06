@@ -108,13 +108,22 @@ footer {
 
 .banner-button {
   background: #F44500;
-  border-radius: 7px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   padding: 10px 20px;
   border-radius: 24px;
   position:relative;
+}
+
+.submit-btn {
+  background-color: #ff4500;
+  color:#ffffff;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7.5px 30px;
+  position: relative;
 }
 
 .banner-button:hover {

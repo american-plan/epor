@@ -58,7 +58,7 @@ h2,
 h2 a {
   margin-bottom: 1rem;
   color: #484d52;
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.85;
   line-height: 42px;
@@ -101,3 +101,19 @@ img {
   max-width: 100%;
 }
 
+.container{
+  display: grid;
+  grid-template-columns: [first] 40% [second] 60%;
+  top: "10%";
+  left: "15%";
+}
+
+.item-a{
+  grid-template-areas: 1/2;
+  justify-self: start;
+  align-self: stretch;
+}
+
+.item-b {
+  grid-template-areas: 2/2;
+}

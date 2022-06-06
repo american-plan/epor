@@ -6,6 +6,7 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.8.2",
+    "@mui/styles": "^5.8.0",
     "@prismicio/react": "^2.4.0",
     "gatsby": "^4.3.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
