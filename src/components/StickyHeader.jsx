@@ -35,7 +35,7 @@ const HeaderContent = styled('div')`
 const StickyHeader = ({ backgroundUrl, children, isSticky }) => {
     return (
         <>
-            <Root backgroundUrl={backgroundUrl}></Root>
+            <Root backgroundUrl={backgroundUrl}>
             <HeaderContainer>
                 <HeaderContent>
                     <Link to="/">
@@ -65,6 +65,7 @@ const StickyHeader = ({ backgroundUrl, children, isSticky }) => {
                     </div>
                 </HeaderContent>
             </HeaderContainer>
+            </Root>
         </>
     );
 };

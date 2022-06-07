@@ -1,21 +1,30 @@
 import React from 'react';
 import { PrismicLink } from '@prismicio/react';
 import Setup from './ContactModal';
+import { makeStyles } from '@mui/styles';
+
+const bgStyle = makeStyles(() => (
+    {Style:  
+        {   flex: 1,
+            width: "100%",
+            height: "100%",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+        }
+}))
 
 export const HomepageBanner = ({
-    title,
-    description,
-    linkUrl,
-    linkLabel,
     backgroundUrl,
 }) => (
     <section
-        className="homepage-banner"
+        className={bgStyle.makeStyles}
         // style={{
-        //     backgroundImage: `url(${backgroundUrl})`,
+        //     backgroundImage: `url(${backgroundUrl})`, 
+            
         // }}
     >
-        <div>
+        <div className="homepage-banner">
             <section className="card">
                 <h4 className="title">End Poverty & Overcome Racism</h4>
                 <Setup />

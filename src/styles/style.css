@@ -107,7 +107,7 @@ footer {
 }
 
 .banner-button {
-  background: #F44500;
+  background: #f82525;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
@@ -116,18 +116,27 @@ footer {
   position:relative;
 }
 
+.banner-button:hover {
+  background: #cbc9c8;
+}
+
 .submit-btn {
-  background-color: #ff4500;
+  background-color: #fc0705;
   color:#ffffff;
-  border-radius: 7px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 700;
   padding: 7.5px 30px;
   position: relative;
 }
 
-.banner-button:hover {
-  background: #cbc9c8;
+.btn {
+  position: absolute;
+  background-color: white;
+  border-color: white;
+  border-style: hidden;
+  left: 94%;
+  top: 2%;
 }
 
 /* Text Sections */

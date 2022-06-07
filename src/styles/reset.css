@@ -134,11 +134,3 @@ table {
   border-spacing: 0;
 }
 
-.btn {
-  position: absolute;
-  background-color: white;
-  border-color: white;
-  border-style: hidden;
-  left: 94%;
-  top: 2%;
-}

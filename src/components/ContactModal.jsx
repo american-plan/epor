@@ -3,41 +3,47 @@ import { deepMemo } from '@hooks';
 import {Modal, Box, TextField} from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import contact_modal from '@images/contact-modal.png';
-import { borderRadius } from '@mui/system';
+
 
 const useSytle = makeStyles(() => (
    {textField: {
-    width: "80%",
-    marginLeft: "auto",
-    marginRight: "auto",
-    paddingBottom: 0,
-    marginTop: 0,
-    fontWeight: 500,
+        fontFamily: "montserrat",
+        width: "98%",
+        borderRadius: '10px',
+        marginLeft: "auto",
+        marginRight: "auto",
+        paddingBottom: 0,
+        marginTop: 0,
+        fontWeight: 500, 
+        backgroundColor: "rgba(225, 131, 131, 0.33)", 
+        borderColor: "white",
   },
-  input: {
-    color: "blue"
-  }}))
+    
+  }))
 
 const textStyle = makeStyles(() => (
     {textField2:{
-            width: "39%",
+            fontFamily: "montserrat",
+            width: "47.6%",
             marginLeft: "auto",
             marginRight: "auto",
             paddingBottom: 0,
             marginTop: 0,
             fontWeight: 500,
+            backgroundColor: "rgba(225, 131, 131, 0.33)", 
     }}))
 
 const ContactModal = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const handleSubmit = () => {setOpen(false)}
     const classes = useSytle();
     const newClass = textStyle();
 
     return (
         <div>
-            <button className='banner-button' onClick={handleOpen}>Join the Fight</button>
+            <button className='banner-button' onClick={handleOpen} style={{fontSize: 24, fontWeight: 600,}}>Join the Fight</button>
             <Modal
                 open = {open}
                 aria-describedby = "form"
@@ -66,35 +72,68 @@ const ContactModal = () => {
                                 top: "10%",
                                 left: "10%",
                             }}>   
-                            <button className='btn' onClick={handleClose} style={{fontSize:24}}>X</button>
+                            <button className='btn' onClick={handleClose} style={{fontSize:30, }}>X</button>
+                            <button className='submit-btn' style={{top:'87.5%', left:'70%', fontSize:18     , fontWeight:800}} 
+                                onClick={handleSubmit}>Submit</button>
                             <Box 
                                 component="form"
                                 sx={{
-                                '& .MuiTextField-root':{m: 1},
+                                '& .MuiTextField-root':{m: 0.75}, 
                                 }}
                                 noValidate
                                 autoComplete = "off">
-                                <div id = "form">   
-                                    <h1 style={{color: "orangered", 
-                                        fontFamily:"sans-serif" }}>It's your turn to take action</h1>
-                                    <h2> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
-                                    <TextField 
-                                        id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={newClass.textField2}
-                                    />
-                                    <TextField sx={{}}
-                                        id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={newClass.textField2}
-                                    />
-                                    <TextField 
-                                        id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
-                                    />
-                                    <TextField 
-                                        id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
-                                    />
-                                    <TextField 
-                                        id = "outlined-messages" label = "Messages" type = "text" placeholder='Messages' multiline rows={5} className={classes.textField}
-                                    />
+                                <div id = "form">
+                                <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' />
+                                <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' />
+                                    <Box sx = {{
+                                        textAlign: "start",
+                                        bgcolor: "background.paper",
+                                        width: "80%",
+                                        height: 500,
+                                        position: 'relative',
+                                        top: "10%",
+                                        left: "10%",
+                                    }}>
+                                        <h1 style={{fontFamily: "Karla",color: "#fc0705", textAlign: "justify",}}>
+                                            It's your turn to take action</h1>
+                                        <h2 style={{fontFamily: "Montserrat"}}> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
+                                        <TextField 
+                                            id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={newClass.textField2}
+                                        />
+                                        <TextField 
+                                            id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={newClass.textField2}
+                                        />
+                                        <TextField 
+                                            id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
+                                        />
+                                        <TextField 
+                                            id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
+                                        />
+                                        <TextField 
+                                            id = "outlined-messages" label = "Messages" type = "text" placeholder='Messages' multiline rows={4} className={classes.textField}
+                                        />
+                                    </Box>
+                                    <Box sx = {{
+                                        textAlign: "start",
+                                        bgcolor: "background.paper",
+                                        width: 311,
+                                        height: 45,
+                                        position: 'relative',
+                                        top: "60%",
+                                        left: "10%",
+                                    }}>
+                                        <a style={{fontFamily: "Montserrat", }}> The site is protected by </a>
+                                        <a style={{fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline" }} 
+                                            href = ""> reCAPTCHA </a>
+                                        <a style={{fontFamily: "Montserrat", }}> and the Google </a>
+                                        <a style={{fontFamily: "Montserrat",  color: "#fc0705", textDecorationLine: "underline"}}
+                                            href = ""> Privacy Policy </a>
+                                        <a style={{fontFamily: "Montserrat", }}> and </a>
+                                        <a style={{fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
+                                            herf = ""> Term of Service </a>
+                                        <a style={{fontFamily: "Montserrat", }}> apply </a>
+                                    </Box>
                                 </div>
-                                <button className='submit-btn' style={{top:'95%', left:'65%'}}>Submit</button>
                             </Box>
                         </Box>        
                     </div>

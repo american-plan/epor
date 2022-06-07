@@ -24,11 +24,11 @@ body {
 }
 
 a {
-  color: #72767b;
+  color: #000000;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.35;
-  line-height: 28px;
+  line-height: 18px;
   text-decoration: none;
 }
 
@@ -47,7 +47,7 @@ h6 {
 h1 {
   font-family: 'Amiri', Serif;
   font-size: 42px;
-  font-weight: normal;
+  font-weight: 700;
   color: #484d52;
   line-height: 52px;
   letter-spacing: 1.14;
@@ -58,10 +58,10 @@ h2,
 h2 a {
   margin-bottom: 1rem;
   color: #484d52;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.85;
-  line-height: 42px;
+  line-height: 36px;
 }
 
 h3,
@@ -116,4 +116,6 @@ img {
 
 .item-b {
   grid-template-areas: 2/2;
+  justify-self: auto;
+  align-self: auto;
 }
