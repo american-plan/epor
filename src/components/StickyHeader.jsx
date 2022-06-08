@@ -5,6 +5,7 @@ import { deepMemo } from '@hooks';
 
 import { EPORLogo, Heart } from './Logo';
 import colors from '@colors';
+import { HomepageBanner } from './HomepageBanner';
 
 const Root = styled('div')`
     flex-grow: 1;
@@ -18,25 +19,21 @@ const Root = styled('div')`
     display: flex;
 `;
 
-const HeaderContainer = styled('div')`
-    display: flex;
-    padding: 3em 4.5em;
-    position: sticky;
-    top: 0;
-`;
-
 const HeaderContent = styled('div')`
-    position: relative;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
+    
 `;
 
 const StickyHeader = ({ backgroundUrl, children, isSticky }) => {
     return (
         <>
             <Root backgroundUrl={backgroundUrl}>
-            <HeaderContainer>
                 <HeaderContent>
                     <Link to="/">
                         <EPORLogo className="logo" />
@@ -64,7 +61,7 @@ const StickyHeader = ({ backgroundUrl, children, isSticky }) => {
                         </div>
                     </div>
                 </HeaderContent>
-            </HeaderContainer>
+                <HomepageBanner />
             </Root>
         </>
     );

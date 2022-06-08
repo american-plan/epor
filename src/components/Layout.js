@@ -10,7 +10,6 @@ import './../styles/style.css';
 export const Layout = ({ backgroundUrl, isHomepage, children, navigation }) => (
     <>
         <StickyHeader backgroundUrl={backgroundUrl} />
-        {children}
         <Footer />
     </>
 );

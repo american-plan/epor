@@ -119,3 +119,17 @@ img {
   justify-self: auto;
   align-self: auto;
 }
+
+.homepage-container {
+  display: grid;
+  grid-template-rows: [line-2] 77px [line-1] 77px [line0] 75px [line1] 97px [line2] 50px [line3] 10px [line4] 172px;
+  grid-template-columns: [zeroline] 139px [first] 474px [second] 242px [third] 239px [fourth] 261px; 
+  top: 141px;
+  
+}
+
+.item-1{
+  grid-template-areas: 1/2/2/3 ;
+  justify-self: start;
+  align-self: flex-end;
+}
