@@ -122,14 +122,102 @@ img {
 
 .homepage-container {
   display: grid;
-  grid-template-rows: [line-2] 77px [line-1] 77px [line0] 75px [line1] 97px [line2] 50px [line3] 10px [line4] 172px;
-  grid-template-columns: [zeroline] 139px [first] 474px [second] 242px [third] 239px [fourth] 261px; 
-  top: 141px;
+  grid-template-rows: [borderspacerow] 135px [line-2] 75px [line-1] 75px [line0] 75px [line1] 90px [line2] 48px [line3] 15px [line4] 59px [line5] 113px [endrow];
+  grid-template-columns: [borderspacecolumn] 190px [first] 480px [second] 242px [third] 239px [fourth] 261px [endcolumn]; 
   
 }
 
 .item-1{
-  grid-template-areas: 1/2/2/3 ;
+  grid-column-start: first;
+  grid-column-end: second;
+  grid-row-start: line-2;
+  grid-row-end: line-1;
+  justify-self: start;
+  align-self: center;
+}
+
+.item-2{
+  grid-column-start: first;
+  grid-column-end: second;
+  grid-row-start:line-1;
+  grid-row-end: line0;
+  justify-self: center;
+  align-self: center;
+}
+
+.item-3{
+  grid-column-start: first;
+  grid-column-end: third;
+  grid-row-start: line0;
+  grid-row-end: line1;
+  justify-self: end;
+  align-self: center;
+}
+
+.item-4{
+  grid-column-start: first;
+  grid-row-end: second;
+  grid-row-start: line1;
+  grid-row-end: line2;
   justify-self: start;
   align-self: flex-end;
+}
+
+.item-5{
+  grid-column-start: second;
+  grid-column-end: third;
+  grid-row-start: line2;
+  grid-row-end: line3;
+  justify-self: start;
+  align-self: end;
+}
+
+.item-6{
+  grid-column-start: third;
+  grid-column-end: fourth;
+  grid-row-start: line2;
+  grid-row-end: line3;
+  justify-self: start;
+  align-self: end;
+}
+
+.item-7{
+  grid-column-start: fourth;
+  grid-column-end: endcolumn;
+  grid-row-start: line2;
+  grid-row-end: line3;
+  justify-self: start;
+  align-self: end;
+}
+
+.item-8{
+  grid-column-start: second;
+  grid-column-end: endcolumn;
+  grid-row-start: line3;
+  grid-row-end: line4;
+  justify-self: stretch;
+  align-self: start;
+}
+
+.item-9{
+  grid-column-start: second;
+  grid-column-end: third;
+  grid-row-start: line4;
+  grid-row-end: line5;
+}
+
+.item-10{
+  grid-column-start: third;
+  grid-column-end: fourth;
+  grid-row-start: line4;
+  grid-row-end: line5;
+}
+
+.item-11{
+  grid-column-start: fourth;
+  grid-column-end: endcolumn;
+  grid-row-start: line4;
+  grid-row-end: line5;
+  justify-self: start;
+  align-self: center;
 }
