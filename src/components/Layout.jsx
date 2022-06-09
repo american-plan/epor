@@ -1,13 +1,11 @@
-import * as React from 'react';
-
-import { Header } from './Header';
+import React from 'react';
 import StickyHeader from './StickyHeader';
-import { Footer } from './Footer';
+import Footer from './Footer';
 import './../styles/reset.css';
 import './../styles/common.css';
 import './../styles/style.css';
 
-import  styled  from '@emotion/styled';
+import styled from '@emotion/styled';
 
 const Root = styled('div')`
     flex-grow: 1;
@@ -19,14 +17,16 @@ const Root = styled('div')`
     width: 100vw;
     height: 100vh;
     display: flex;
-`
+`;
 
-export const Layout = ({ backgroundUrl, isHomepage, children, navigation }) => (
-    <>
-        <Root backgroundUrl={backgroundUrl}>
-        <StickyHeader  />
-        {children}
-        </Root>
-        <Footer />
-    </>
-);
+export const Layout = ({ backgroundUrl, isHomepage, children, navigation }) => {
+    return (
+        <>
+            <Root backgroundUrl={backgroundUrl}>
+                <StickyHeader />
+                {children}
+            </Root>
+            <Footer />
+        </>
+    );
+};

@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 
 import { Layout } from '@components/Layout';
 import { Seo } from '@components/Seo';
-import { HomepageBanner } from '@components/HomepageBanner';
+import HomepageBanner from '@components/HomepageBanner';
 
 const HomeTemplate = ({ data }) => {
     if (!data) return null;
