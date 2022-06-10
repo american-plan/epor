@@ -60,8 +60,7 @@ export const HomepageBanner = ({
                     style={{
                         fontSize: 24, 
                         fontFamily:"Montserrat",
-                        fontWeight: 600,
-                        alignSelf: "start"}}> What is the American Plan? </div>
+                        fontWeight: 600,}}> What is the American Plan? </div>
                 <div className="item-10"
                     style={{
                         fontSize: 24, 
