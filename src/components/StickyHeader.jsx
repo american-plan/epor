@@ -6,68 +6,46 @@ import { deepMemo } from '@hooks';
 import { EPORLogo, Heart } from './Logo';
 import colors from '@colors';
 
-const Root = styled('div')`
-    flex-grow: 1;
-    background-image: ${({ backgroundUrl }) =>
-        (backgroundUrl && `url(${backgroundUrl})`) || 'none'};
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-`;
-
 const HeaderContent = styled('div')`
     width: 90%;
     position: absolute;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     top: 5%;
     left: 5%;
-    
 `;
 
 const HeaderContainer = styled('div')`
-    position: relative;
-    display: flex;
-    padding-top: 3.75em;
-    padding-bottom: 3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 2em 0em;
+    z-index: 999;
 `;
 
+const TestContainer = styled('div')`
+    width: 3.5em;
+    height: 3.5em;
+    display: flex;
+    border-radius: 50%;
+    background-color: ${colors.white25};
+    justify-content: center;
+    align-items: center;
+`;
 const StickyHeader = ({ backgroundUrl, children, isSticky }) => {
     return (
-        <>
-            {/* <Root backgroundUrl={backgroundUrl}> */}
-                <HeaderContent>
-                    <Link to="/">
-                        <EPORLogo className="logo" />
-                    </Link>
-                    <div
-                        style={{
-                            position: 'relative',
-                            width: 54,
-                            height: 53,
-                            borderRadius: '50%',
-                            backgroundColor: colors.white25,
-                            justifyContent: 'center',
-                            alignContent: 'center',
-                        }}
-                    >
-                        <div
-                            style={{
-                                position: 'absolute',
-                                top: '50%',
-                                left: '50%',
-                                transform: 'translate(-50%, -50%)',
-                            }}
-                        >
-                            <Heart />
-                        </div>
-                    </div>
-                </HeaderContent>
-            {/* </Root> */}
-        </>
+        <HeaderContainer>
+            <HeaderContent>
+                <Link to="/">
+                    <EPORLogo className="logo" />
+                </Link>
+                <TestContainer>
+                    <Heart />
+                </TestContainer>
+            </HeaderContent>
+        </HeaderContainer>
     );
 };
 

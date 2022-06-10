@@ -124,7 +124,6 @@ img {
   display: grid;
   grid-template-rows: [borderspacerow] 135px [line-2] 75px [line-1] 75px [line0] 75px [line1] 90px [line2] 48px [line3] 15px [line4] 59px [line5] 113px [endrow];
   grid-template-columns: [borderspacecolumn] 190px [first] 480px [second] 242px [third] 239px [fourth] 261px [endcolumn]; 
-  
 }
 
 .item-1{
@@ -204,6 +203,8 @@ img {
   grid-column-end: third;
   grid-row-start: line4;
   grid-row-end: line5;
+  justify-self: start;
+  align-self: center;
 }
 
 .item-10{
@@ -211,6 +212,8 @@ img {
   grid-column-end: fourth;
   grid-row-start: line4;
   grid-row-end: line5;
+  justify-content: start;
+  align-content: center;
 }
 
 .item-11{
@@ -220,4 +223,31 @@ img {
   grid-row-end: line5;
   justify-self: start;
   align-self: center;
+}
+
+.item-12{
+  grid-column-start: second;
+  grid-column-end: third;
+  grid-row-start: line5;
+  grid-row-end: endrow;
+  justify-self: start;
+  align-self: flex-start;
+}
+
+.item-13{
+  grid-column-start: third;
+  grid-column-end: fourth;
+  grid-row-start: line5;
+  grid-row-end: endrow;
+  justify-self: start;
+  align-self: flex-start;
+}
+
+.item-14{
+  grid-column-start: fourth;
+  grid-column-end: endcolumn;
+  grid-row-start: line5;
+  grid-row-end: endrow;
+  justify-self: start;
+  align-self: flex-start;
 }
