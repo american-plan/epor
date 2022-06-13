@@ -1,5 +1,6 @@
 import React from 'react';
 import StickyHeader from './StickyHeader';
+import Mainpage from './Mainpage';
 import Footer from './Footer';
 import './../styles/reset.css';
 import './../styles/common.css';
@@ -26,6 +27,7 @@ export const Layout = ({ backgroundUrl, isHomepage, children, navigation }) => {
                 <StickyHeader />
                 {children}
             </Root>
+            <Mainpage />
             <Footer />
         </>
     );
