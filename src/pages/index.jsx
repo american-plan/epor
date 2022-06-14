@@ -6,7 +6,6 @@ import { graphql } from 'gatsby';
 import { Layout } from '@components/Layout';
 import { Seo } from '@components/Seo';
 import HomepageBanner from '@components/HomepageBanner';
-import Mainpage from '@components/Mainpage'
 
 const HomeTemplate = ({ data }) => {
     if (!data) return null;
@@ -22,7 +21,6 @@ const HomeTemplate = ({ data }) => {
                 linkLabel={doc.banner_link_label.text}
                 backgroundUrl={doc.banner_background.url}
             />
-            {/* <Mainpage /> */}
         </Layout>
     );
 };
