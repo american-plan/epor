@@ -47,6 +47,9 @@ const ContactModal = () => {
             <Modal
                 open = {open}
                 aria-describedby = "form"
+                style = {{
+                    bgcolor: "black"
+                }}
             >
                 <div className='container' >
                     <div className='item-a'>

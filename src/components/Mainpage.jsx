@@ -4,7 +4,8 @@ import background from "@images/mainpage-background.png"
 
 import styled from "@emotion/styled";
 import { Box } from "@mui/material"
-import { relative } from "path";
+import { makeStyles } from "@mui/styles";
+import { height } from "@mui/system";
 
 const Main = styled('div')`
     flex-grow: 1;
@@ -18,10 +19,36 @@ const Main = styled('div')`
     display: flex;
 `;
 
+const itemStyle = makeStyles(()=> ({
+    root: {
+        backgroundColor: "white",
+        width: 262,
+        height: 131,
+        borderRadius: 12,
+        position: "absolute",
+    },
+
+    content: {
+        paddingTop: 53,
+        paddingLeft: 39,
+        width: 201,
+        height: 42,
+    },
+
+    circle: {
+        backgroundColor: "rgba(248,99,99,0.7)",
+        width: 50,
+        height: 50,
+        borderRadius: "50%",
+    }
+}))
+
 
 
 const mainpage = () => {
-    
+
+    const classes = itemStyle();
+
     return(
         <Main  backgroundUrl = {background}>
             <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' />
@@ -64,6 +91,20 @@ const mainpage = () => {
                             color: "#C52D2E",
                         }}> Overcome Racism </a>
                     </div>
+                </Box>
+            </div>
+            <div className="items">
+                <Box className = {classes.root} style={{ top: 944, left: 61, }}>
+                    <Box className = {classes.content}>
+                    <a style={{
+                        fontFamily: "Karla", 
+                        fontSize: 18, 
+                        fontWeight: "bold", 
+                        lineHeight: "normal",}}> Create decent housing for all </a>
+                    </Box>
+                    {/* <Box className = {classes.circle} style = {{left: 43, top: 1033}}>
+
+                    </Box> */}
                 </Box>
             </div>
             

@@ -141,6 +141,10 @@ footer {
 
 /* Mainpage */
 
+.item-content {
+  font-weight: bold;
+  font-size: 18;
+}
 
 
 /* Text Sections */
