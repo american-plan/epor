@@ -5,7 +5,6 @@ import background from "@images/mainpage-background.png"
 import styled from "@emotion/styled";
 import { Box } from "@mui/material"
 import { makeStyles } from "@mui/styles";
-import { height } from "@mui/system";
 
 const Main = styled('div')`
     flex-grow: 1;
@@ -40,6 +39,12 @@ const itemStyle = makeStyles(()=> ({
         width: 50,
         height: 50,
         borderRadius: "50%",
+    },
+
+    circleContent: {
+        color: "#cf1111",
+        fontWeight: "bold",
+        fontSize: 24,
     }
 }))
 
@@ -52,8 +57,10 @@ const mainpage = () => {
     return(
         <Main  backgroundUrl = {background}>
             <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' />
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+            
             <div className="title">
-                
+               
                 <Box style={{
                     bgcolor: "background.paper",
                     width: 686,
@@ -102,9 +109,9 @@ const mainpage = () => {
                         fontWeight: "bold", 
                         lineHeight: "normal",}}> Create decent housing for all </a>
                     </Box>
-                    {/* <Box className = {classes.circle} style = {{left: 43, top: 1033}}>
-
-                    </Box> */}
+                    <Box className = {classes.circle} style = {{right: 230, top: 89, position: "absolute", textAlign: "center", justifyItem: "center"}}>
+                        <a className = {classes.circleContent} style = {{fontFamily: "Roboto", }}> 1 </a>
+                    </Box>
                 </Box>
             </div>
             
