@@ -122,8 +122,8 @@ img {
 
 .homepage-container {
   display: grid;
-  grid-template-rows: [borderspacerow] 135px [line-2] 75px [line-1] 75px [line0] 75px [line1] 90px [line2] 48px [line3] 15px [line4] 59px [line5] 113px [endrow];
-  grid-template-columns: [borderspacecolumn] 190px [first] 480px [second] 242px [third] 239px [fourth] 261px [endcolumn]; 
+  grid-template-rows: [borderspacerow] 19.7% [line-2] 11% [line-1] 11% [line0] 11% [line1] 13.1% [line2] 7% [line3] 2.2% [line4] 9% [line5] 16.5% [endrow] 100px [endborderrow];
+  grid-template-columns: [borderspacecolumn] 13.4% [first] 35% [second] 16.5% [third] 15% [fourth] 16.8% [endcolumn] 100px [endbordercolumn]; 
 }
 
 .item-1{

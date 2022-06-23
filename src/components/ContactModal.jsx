@@ -129,11 +129,11 @@ const ContactModal = () => {
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline" }} 
                                             href = ""> reCAPTCHA </a>
                                         <a style={{fontFamily: "Montserrat", }}> and the Google </a>
-                                        <a style={{fontWeight: 600,fontFamily: "Montserrat",  color: "#fc0705", textDecorationLine: "underline"}}
+                                        <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
                                             href = ""> Privacy Policy </a>
                                         <a style={{fontFamily: "Montserrat", }}> and </a>
-                                        <a style={{fontWeight: 600,fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
-                                            herf = ""> Term of Service </a>
+                                        <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
+                                            href = ""> Term of Service </a>
                                         <a style={{fontFamily: "Montserrat", }}> apply </a>
                                     </Box>
                                 </div>

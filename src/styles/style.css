@@ -101,9 +101,8 @@ footer {
   height: 5px;
   width: 242px;
   border: 1px white;
-  background: #ff4500;
   display: table-cell;
-  background-position: 90% 75%;
+  
 }
 
 .banner-button {

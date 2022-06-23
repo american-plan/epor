@@ -13,6 +13,8 @@ const Main = styled('div')`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    min-width: 1430px;
+    min-height: 795px;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -78,8 +80,8 @@ const mainpage = () => {
                     width: 686,
                     height: 106,
                     position: 'relative',
-                    top: 363,
-                    left: 386,
+                    top: "45.66%",
+                    left: "60%",
                     textAlign: "center",
                     alignContent: "center",
                     lineHeight: 2.85,
@@ -112,8 +114,8 @@ const mainpage = () => {
                     </div>
                 </Box>
             </div>
-            <div className="items">
-                <Box className = {classes.root} style={{ top: 944, left: 61, }}>
+            <div>
+                <Box className = {classes.root} style={{ top: "124.5%", left: "4.46%", }}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Create decent housing for all </a>
                     </Box>
@@ -121,7 +123,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 1 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 908, left: 443, }}>
+                <Box className = {classes.root} style = {{top: "116.5%", left: "30.89%", }}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Achieve equity in school funding </a>
                     </Box>
@@ -129,7 +131,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 2 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 992, left: 800}}>
+                <Box className = {classes.root} style = {{top: "126.5%", left: "55.78%"}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Provide employment or universal basic income </a>
                     </Box>
@@ -137,7 +139,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 3 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 898, left: 1124}}>
+                <Box className = {classes.root} style = {{top: "118.5%", left: "78.38%"}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Conduct policy, and deliver public service </a>
                     </Box>
@@ -145,7 +147,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 4 </h1> 
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 1093, left: 1145}}>
+                <Box className = {classes.root} style = {{top: "144.8%", left: "81%"}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Ensure enough stores and offices </a> 
                     </Box>
@@ -153,7 +155,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 5 </h1> 
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 1291, left: 1080}}>
+                <Box className = {classes.root} style = {{top: "168.5%", left: "76.5%"}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Health care coverage & a clean environment </a>
                     </Box>
@@ -161,7 +163,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 6 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 1435, left: 808,}}>
+                <Box className = {classes.root} style = {{top: "186.3%", left: "56.3%",}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Assure full voting rights </a>
                     </Box>
@@ -169,7 +171,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 7 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 1305, left: 518,}}>
+                <Box className = {classes.root} style = {{top: "170.5%", left: "37.8%",}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> End the transfer of military hardware </a>
                     </Box>
@@ -177,7 +179,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 8 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 1401, left: 216,}}>
+                <Box className = {classes.root} style = {{top: "182.8%", left: "17%",}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Eliminate arrest for drug offenses </a>
                     </Box>
@@ -185,7 +187,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 9 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: 1186, left: 23}}>
+                <Box className = {classes.root} style = {{top: "154.8%", left: "3.15%"}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Etablish diverse commisions </a>
                     </Box>

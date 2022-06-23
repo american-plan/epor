@@ -76,15 +76,15 @@ const HomepageBanner = ({}) => {
                 <div className="item-8">
                     <div
                         className="retangle"
-                        style={{ backgroundColor: '#e02323', width: '242px' }}
+                        style={{ backgroundColor: '#e02323', width: '253px' }}
                     ></div>
                     <div
                         className="retangle"
-                        style={{ backgroundColor: 'white', width: '239px' }}
+                        style={{ backgroundColor: 'white', width: '231px' }}
                     ></div>
                     <div
                         className="retangle"
-                        style={{ backgroundColor: 'gray', width: '261px' }}
+                        style={{ backgroundColor: 'gray', width: '257px' }}
                     ></div>
                 </div>
                 <div

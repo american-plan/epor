@@ -17,7 +17,7 @@ const logoStyle = makeStyles (() => ({
 }))
 
 const HeaderContent = styled('div')`
-    width: 90%;
+    width: 92%;
     position: absolute;
     display: flex;
     justify-content: space-between;
