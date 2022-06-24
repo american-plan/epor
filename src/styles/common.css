@@ -103,7 +103,7 @@ img {
 
 .container{
   display: grid;
-  grid-template-columns: [first] 40% [second] 60%;
+  grid-template-columns: [first] 40% [second] 60% [third];
   top: "10%";
   left: "15%";
 }
@@ -149,7 +149,7 @@ img {
   grid-column-end: third;
   grid-row-start: line0;
   grid-row-end: line1;
-  justify-self: end;
+  justify-self: center;
   align-self: center;
 }
 
