@@ -9,6 +9,7 @@ const useSytle = makeStyles(() => (
    {textField: {
         fontFamily: "montserrat",
         width: "98%",
+        height: "5%",
         borderRadius: '10px',
         marginLeft: "auto",
         marginRight: "auto",
@@ -18,20 +19,20 @@ const useSytle = makeStyles(() => (
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
         borderColor: "white",
   },
+    textField2:{
+        fontFamily: "montserrat",
+        width: "47.6%",
+        marginLeft: "auto",
+        marginRight: "auto",
+        paddingBottom: 0,
+        marginTop: 0,
+        fontWeight: 500,
+        backgroundColor: "rgba(225, 131, 131, 0.33)", 
+        borderRadius: "10px",
+    }
     
   }))
 
-const textStyle = makeStyles(() => (
-    {textField2:{
-            fontFamily: "montserrat",
-            width: "47.6%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            paddingBottom: 0,
-            marginTop: 0,
-            fontWeight: 500,
-            backgroundColor: "rgba(225, 131, 131, 0.33)", 
-    }}))
 
 const ContactModal = () => {
     const [open, setOpen] = useState(false);
@@ -39,7 +40,6 @@ const ContactModal = () => {
     const handleClose = () => setOpen(false);
     const handleSubmit = () => {setOpen(false)}
     const classes = useSytle();
-    const newClass = textStyle();
 
     return (
         <div>
@@ -56,27 +56,27 @@ const ContactModal = () => {
                         <Box 
                             sx ={{
                                 bgcolor: "background.paper",
-                                width: 427,
-                                height: 636,
+                                width: "105%",
+                                height: "100%",
                                 position: 'relative',
                                 top: "10%",
                                 left: "10%",
                             }}>            
-                            <img src = {contact_modal} alt = ''/>
+                            <img src = {contact_modal} alt = '' />
                         </Box> 
                     </div>
                     <div className='item-b'>
                         <Box 
                             sx ={{
                                 bgcolor: "background.paper",
-                                width: 648,
-                                height: 636,
+                                width: "110%",
+                                height: "100%",
                                 position: 'relative',
                                 top: "10%",
                                 left: "10%",
                             }}>   
                             <button className='btn' onClick={handleClose} style={{fontSize:30, }}>X</button>
-                            <button className='submit-btn' style={{top:'87.5%', left:'70%', fontSize:18     , fontWeight:800}} 
+                            <button className='submit-btn' style={{top:'87.5%', left:'70%', fontSize:18, fontWeight:800}} 
                                 onClick={handleSubmit}>Submit</button>
                             <Box 
                                 component="form"
@@ -92,7 +92,7 @@ const ContactModal = () => {
                                         textAlign: "start",
                                         bgcolor: "background.paper",
                                         width: "80%",
-                                        height: 500,
+                                        height: "90%",
                                         position: 'relative',
                                         top: "10%",
                                         left: "10%",
@@ -101,10 +101,10 @@ const ContactModal = () => {
                                             It's your turn to take action</h1>
                                         <h2 style={{fontFamily: "Montserrat"}}> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
                                         <TextField 
-                                            id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={newClass.textField2}
+                                            id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={classes.textField2}
                                         />
                                         <TextField 
-                                            id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={newClass.textField2}
+                                            id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField2}
                                         />
                                         <TextField 
                                             id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}

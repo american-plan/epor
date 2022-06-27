@@ -15,7 +15,7 @@ const Root = styled('div')`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-width: 1430px;
+    min-width: 1434px;
     min-height: 800px;
     width: 100vw;
     height: 100vh;

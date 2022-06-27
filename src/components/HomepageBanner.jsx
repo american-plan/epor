@@ -1,12 +1,14 @@
 import React from 'react';
 import Setup from './ContactModal';
 import { deepMemo } from '@hooks';
+import styled from '@emotion/styled';
+
 
 const HomepageBanner = ({}) => {
 
     const tilteStyle = {
         fontFamily: "Montserrat",
-        fontSize: 60,
+        fontSize: "3.75em",
         fontWeight: 800,
     }
 
@@ -78,16 +80,16 @@ const HomepageBanner = ({}) => {
                 </div>
                 <div className="item-8">
                     <div
-                        className="retangle"
-                        style={{ backgroundColor: '#e02323', width: '16.15em' }}
+                        className= "retangle"
+                        style={{ backgroundColor: '#e02323', width: '260px' }}
                     ></div>
                     <div
-                        className="retangle"
-                        style={{ backgroundColor: 'white', width: '15em' }}
+                        className= "retangle"
+                        style={{ backgroundColor: 'white', width: '31%', }}
                     ></div>
                     <div
-                        className="retangle"
-                        style={{ backgroundColor: 'gray', width: '16.5em' }}
+                        className= "retangle"
+                        style={{ backgroundColor: 'gray', width: '35%' }}
                     ></div>
                 </div>
                 <div
