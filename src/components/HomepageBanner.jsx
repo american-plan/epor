@@ -1,5 +1,5 @@
 import React from 'react';
-import contact_modal from './ContactModal';
+import Setup from './ContactModal';
 import { deepMemo } from '@hooks';
 
 
@@ -58,7 +58,7 @@ const HomepageBanner = ({}) => {
                     Overcome Racism
                 </div>
                 <div className="item-4">
-                    <contact_modal />
+                    <Setup />
                 </div>
                 <div
                     className="item-5"

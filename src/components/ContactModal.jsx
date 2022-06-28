@@ -3,6 +3,7 @@ import { deepMemo } from '@hooks';
 import {Modal, Box, TextField} from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import contact_modal from '@images/contact-modal.png';
+import Setup from './ReCaptcha';
 
 
 const useSytle = makeStyles(() => (
@@ -17,7 +18,8 @@ const useSytle = makeStyles(() => (
         marginTop: 0,
         fontWeight: 500, 
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
-   },
+        borderColor: "white",
+  },
     textField2:{
         fontFamily: "montserrat",
         width: "47.6%",
@@ -28,7 +30,7 @@ const useSytle = makeStyles(() => (
         fontWeight: 500,
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
         borderRadius: "10px",
-    },
+    }
     
   }))
 
@@ -84,7 +86,7 @@ const ContactModal = () => {
                                 }}
                                 noValidate
                                 autoComplete = "off">
-                                <div id = "form">
+                                <div>
                                 <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' />
                                 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' />
                                     <Box sx = {{
@@ -126,7 +128,7 @@ const ContactModal = () => {
                                     }}>
                                         <a style={{fontFamily: "Montserrat", }}> The site is protected by </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline" }} 
-                                            href = ""> reCAPTCHA </a>
+                                            onClick = {<Setup/>}> reCAPTCHA </a>
                                         <a style={{fontFamily: "Montserrat", }}> and the Google </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
                                             href = ""> Privacy Policy </a>
