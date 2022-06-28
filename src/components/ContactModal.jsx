@@ -128,7 +128,7 @@ const ContactModal = () => {
                                     }}>
                                         <a style={{fontFamily: "Montserrat", }}> The site is protected by </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline" }} 
-                                            onClick = {<Setup/>}> reCAPTCHA </a>
+                                            href = {<Setup/>}> reCAPTCHA </a>
                                         <a style={{fontFamily: "Montserrat", }}> and the Google </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
                                             href = ""> Privacy Policy </a>
