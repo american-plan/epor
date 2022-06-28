@@ -17,8 +17,7 @@ const useSytle = makeStyles(() => (
         marginTop: 0,
         fontWeight: 500, 
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
-        borderColor: "white",
-  },
+   },
     textField2:{
         fontFamily: "montserrat",
         width: "47.6%",
@@ -29,7 +28,7 @@ const useSytle = makeStyles(() => (
         fontWeight: 500,
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
         borderRadius: "10px",
-    }
+    },
     
   }))
 
@@ -119,8 +118,8 @@ const ContactModal = () => {
                                     <Box sx = {{
                                         textAlign: "start",
                                         bgcolor: "background.paper",
-                                        width: 311,
-                                        height: 45,
+                                        width: "50%",
+                                        height: "10%",
                                         position: 'relative',
                                         top: "60%",
                                         left: "10%",

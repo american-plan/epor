@@ -1,7 +1,7 @@
 import React from 'react';
-import Setup from './ContactModal';
+import contact_modal from './ContactModal';
 import { deepMemo } from '@hooks';
-import styled from '@emotion/styled';
+
 
 
 const HomepageBanner = ({}) => {
@@ -39,13 +39,13 @@ const HomepageBanner = ({}) => {
         <section className="homepage-banner">
             <div className="homepage-container">
                 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
-                <div
+                <div    
                     className="item-1"
                     style={ tilteStyle }
                 >
                     End Poverty
                 </div>
-                <div
+                <div    
                     className="item-2"
                     style={ tilteStyle }
                 >
@@ -58,7 +58,7 @@ const HomepageBanner = ({}) => {
                     Overcome Racism
                 </div>
                 <div className="item-4">
-                    <Setup />
+                    <contact_modal />
                 </div>
                 <div
                     className="item-5"
@@ -79,16 +79,17 @@ const HomepageBanner = ({}) => {
                     03
                 </div>
                 <div className="item-8">
+                    <div className='rectangle' style={{width:"1px"}}></div>
                     <div
-                        className= "retangle"
-                        style={{ backgroundColor: '#e02323', width: '260px' }}
+                        className= "rectangle"
+                        style={{ backgroundColor: '#e02323', width: '34%' }}
                     ></div>
                     <div
-                        className= "retangle"
+                        className= "rectangle"
                         style={{ backgroundColor: 'white', width: '31%', }}
                     ></div>
                     <div
-                        className= "retangle"
+                        className= "rectangle"
                         style={{ backgroundColor: 'gray', width: '35%' }}
                     ></div>
                 </div>

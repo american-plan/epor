@@ -18,9 +18,16 @@ const Main = styled('div')`
     width: 100vw;
     height: 100vh;
     display: flex;
+    place-items:center center;
 `;
 
 const itemStyle = makeStyles(()=> ({
+
+   title:{
+        flex: 1,
+        lineHeight: 2.85,
+        textAlign: "center",
+   },
 
     root: {
         backgroundColor: "white",
@@ -74,46 +81,33 @@ const mainpage = () => {
             <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' />
             <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
            
-            <div>
-               
-                <Box style={{
-                    bgcolor: "background.paper",
-                    width: "100%",
-                    height: "12.5%",
-                    position: 'relative',
-                    top: "46.66%",
-                    left: "70%",
-                    textAlign: "center",
-                    alignContent: "center",
-                    lineHeight: 2.85,
-                }}>
-                    <div>
-                        <a style={{
-                            fontFamily: "Karla",
-                            fontWeight: "bold",
-                            fontSize: "250%",
-                        }}> We work where it matters to </a>
-                    </div>
-                    <div>
-                        <a style={{
-                            fontFamily: "Karla",
-                            fontWeight: "bold",
-                            fontSize: 40,
-                            color: "#C52D2E",
-                        }}> End Poverty </a>
-                        <a style={{
-                            fontFamily: "Karla",
-                            fontWeight: "bold",
-                            fontSize: 40,
-                        }}> and </a>
-                        <a style={{
-                            fontFamily: "Karla",
-                            fontWeight: "bold",
-                            fontSize: 40,
-                            color: "#C52D2E",
-                        }}> Overcome Racism </a>
-                    </div>
-                </Box>
+            <div className={classes.title}>
+                <div>
+                    <a style={{
+                        fontFamily: "Karla",
+                        fontWeight: "bold",
+                        fontSize: 40,
+                    }}> We work where it matters to </a>
+                </div>
+                <div>
+                    <a style={{
+                        fontFamily: "Karla",
+                        fontWeight: "bold",
+                        fontSize: 40,
+                        color: "#C52D2E",
+                    }}> End Poverty </a>
+                    <a style={{
+                        fontFamily: "Karla",
+                        fontWeight: "bold",
+                        fontSize: 40,
+                    }}> and </a>
+                    <a style={{
+                        fontFamily: "Karla",
+                        fontWeight: "bold",
+                        fontSize: 40,
+                        color: "#C52D2E",
+                    }}> Overcome Racism </a>
+                </div>
             </div>
             <div>
                 <Box className = {classes.root} style={{ top: "124.5%", left: "4.46%", }}>
@@ -164,7 +158,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 6 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: "186.3%", left: "56.3%",}}>
+                <Box className = {classes.root} style = {{top: "183.3%", left: "56.3%",}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Assure full voting rights </a>
                     </Box>
@@ -172,7 +166,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 7 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: "170.5%", left: "37.8%",}}>
+                <Box className = {classes.root} style = {{top: "167.5%", left: "37.8%",}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> End the transfer of military hardware </a>
                     </Box>
@@ -180,7 +174,7 @@ const mainpage = () => {
                         <h1 className = {classes.circleContent}> 8 </h1>
                     </Box>
                 </Box>
-                <Box className = {classes.root} style = {{top: "182.8%", left: "17%",}}>
+                <Box className = {classes.root} style = {{top: "179.8%", left: "17%",}}>
                     <Box className = {classes.content}>
                         <a className = {classes.itemContent}> Eliminate arrest for drug offenses </a>
                     </Box>
