@@ -3,7 +3,8 @@ import { deepMemo } from '@hooks';
 import {Modal, Box, TextField} from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import contact_modal from '@images/contact-modal.png';
-import Setup from './ReCaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
+
 
 
 const useSytle = makeStyles(() => (
@@ -128,7 +129,7 @@ const ContactModal = () => {
                                     }}>
                                         <a style={{fontFamily: "Montserrat", }}> The site is protected by </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline" }} 
-                                            href = {<Setup/>}> reCAPTCHA </a>
+                                            href = "#reCaptcha"> reCAPTCHA </a> 
                                         <a style={{fontFamily: "Montserrat", }}> and the Google </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
                                             href = ""> Privacy Policy </a>
