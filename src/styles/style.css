@@ -141,6 +141,13 @@ footer {
   color: #cf1111;
 }
 
+/*Contact Modal */
+
+.has-error {
+  color: red;
+  font-size: 0.75rem;
+  position: relative;
+}
 
 /* Text Sections */
 .text-section-2col {

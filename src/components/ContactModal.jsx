@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useState } from 'react';
 import { deepMemo } from '@hooks';
 import {Modal, Box, TextField} from '@mui/material'
 import { makeStyles } from '@mui/styles';
@@ -59,9 +59,10 @@ const ContactModal = () => {
     const reCaptchaOpen = () => setReCaptcha(true);
     const reCaptchaClose = () => setReCaptcha(false);
 
-    const [value, setValue] = useState("")
-    const [errors, setErrors] = useState([])
-    const ref = useRef(null);
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [errors, setErrors] = useState([]);
 
     const handleSubmit = () => {
         if(verified === true){
@@ -80,12 +81,9 @@ const ContactModal = () => {
     }
 
    
-    
     const validate = (validations) => {
-        setErrors(validations.map(errorsFor => errorsFor))
+        setErrors(validations.map(errorsFor => errorsFor(firstname)))
     }
-
-
 
     const classes = useSytle();
 
@@ -121,7 +119,7 @@ const ContactModal = () => {
                                 left: "10%",
                             }}>   
                             <button className='btn' onClick={handleClose} style={{fontSize:30, }}>X</button>
-                            <button className='submit-btn' style={{top:'87.5%', left:'70%', fontSize:18, fontWeight:800}} 
+                            <button className='submit-btn' style={{top:'87%', left:'70%', fontSize:18, fontWeight:800}} 
                                 onClick={handleSubmit}>Submit</button>
                             <Box 
                                 component="form"
@@ -140,14 +138,15 @@ const ContactModal = () => {
                                         height: "90%",
                                         position: 'relative',
                                         top: "10%",
-                                        left: "10%",
+                                        left: "10%", 
                                     }}>
                                         <h1 style={{fontFamily: "Karla",color: "#fc0705", textAlign: "justify",}}>
                                             It's your turn to take action</h1>
                                         <h2 style={{fontFamily: "Montserrat"}}> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
                                         <TextField 
                                             id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={classes.textField2}
-                                            size = "small" value={value} onChange = {(e) => setValue(e.target.value)}
+                                            size = "small" value={firstname} onChange = {(e) => setFirstname(e.target.value)} onClick = {() => validate([isRequired])}
+                                            helperText = {errors.length > 0 ? (<div className='has-error'>{errors.join(" ")}</div>): null}
                                         />
                                         <TextField 
                                             id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField2}
@@ -155,7 +154,8 @@ const ContactModal = () => {
                                         />
                                         <TextField 
                                             id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
-                                            size = "small"
+                                            // size = "small" value={email} onChange = {(e) => setEmail(e.target.email)} onClick = {() => validate([isRequired])}
+                                            // helperText = {errors.length > 0 ? (<div className='has-error'>{errors.join(" ")}</div>): null}
                                         />
                                         <TextField 
                                             id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
