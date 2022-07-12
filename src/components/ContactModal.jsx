@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { deepMemo } from '@hooks';
 import {Modal, Box, TextField} from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import contact_modal from '@images/contact-modal.png';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+const isRequired = (val) => {
+    return val.length > 0 ? "" : "cannot be blank";
+}
 
+// const isEmail = (val) => {
+//     const ai = val.indexOf("@")
+//     const gdi = val.
+// }
 
 const useSytle = makeStyles(() => (
    {textField: {
@@ -31,6 +38,11 @@ const useSytle = makeStyles(() => (
         fontWeight: 500,
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
         borderRadius: "10px",
+    },
+    reCaptcha: {
+        top:"50%",
+        left:"30%",
+        position: "relative"
     }
     
   }))
@@ -40,7 +52,41 @@ const ContactModal = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const handleSubmit = () => {setOpen(false)}
+
+    const [verified, setVerified] = useState(false);
+
+    const [reCaptcha, setReCaptcha] = useState(false);
+    const reCaptchaOpen = () => setReCaptcha(true);
+    const reCaptchaClose = () => setReCaptcha(false);
+
+    const [value, setValue] = useState("")
+    const [errors, setErrors] = useState([])
+    const ref = useRef(null);
+
+    const handleSubmit = () => {
+        if(verified === true){
+            alert("you successfully join with us!");
+            setOpen(false);
+        }
+        else {
+            alert("Please verfy first!")
+        }
+    }
+
+    const onChange = (response) => {
+        if(response){
+            setVerified(true)
+        }
+    }
+
+   
+    
+    const validate = (validations) => {
+        setErrors(validations.map(errorsFor => errorsFor))
+    }
+
+
+
     const classes = useSytle();
 
     return (
@@ -48,10 +94,7 @@ const ContactModal = () => {
             <button className='banner-button' onClick={handleOpen} style={{fontSize: 24, fontWeight: 600,}}>Join the Fight</button>
             <Modal
                 open = {open}
-                aria-describedby = "form"
-                style = {{
-                    bgcolor: "black"
-                }}
+                aria-describedby = "form" 
             >
                 <div className='container' >
                     <div className='item-a'>
@@ -104,15 +147,19 @@ const ContactModal = () => {
                                         <h2 style={{fontFamily: "Montserrat"}}> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
                                         <TextField 
                                             id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={classes.textField2}
+                                            size = "small" value={value} onChange = {(e) => setValue(e.target.value)}
                                         />
                                         <TextField 
                                             id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField2}
+                                            size = "small"
                                         />
                                         <TextField 
                                             id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
+                                            size = "small"
                                         />
                                         <TextField 
                                             id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
+                                            size = "small"
                                         />
                                         <TextField 
                                             id = "outlined-messages" label = "Messages" type = "text" placeholder='Messages' multiline rows={4} className={classes.textField}
@@ -129,7 +176,7 @@ const ContactModal = () => {
                                     }}>
                                         <a style={{fontFamily: "Montserrat", }}> The site is protected by </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline" }} 
-                                            href = "#reCaptcha"> reCAPTCHA </a> 
+                                            href = "#reCaptcha" onClick={reCaptchaOpen}> reCAPTCHA </a> 
                                         <a style={{fontFamily: "Montserrat", }}> and the Google </a>
                                         <a style={{fontWeight: 600, fontFamily: "Montserrat", color: "#fc0705", textDecorationLine: "underline"}}
                                             href = ""> Privacy Policy </a>
@@ -142,6 +189,15 @@ const ContactModal = () => {
                             </Box>
                         </Box>        
                     </div>
+                    <Modal open = {reCaptcha}
+                            onClose = {reCaptchaClose}>
+                            <div className = {classes.reCaptcha} id = "reCaptcha">
+                                <ReCAPTCHA 
+                                    sitekey = "6LcqN-MgAAAAAM61Su3FRVzm_DxtWw9iZwuA5MzB"
+                                    onChange={onChange}
+                                />  
+                            </div>
+                    </Modal>
                 </div>
             </Modal>
         </div>
