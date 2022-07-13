@@ -9,10 +9,11 @@ const isRequired = (val) => {
     return val.length > 0 ? "" : "cannot be blank";
 }
 
-// const isEmail = (val) => {
-//     const ai = val.indexOf("@")
-//     const gdi = val.
-// }
+const isEmail = (val) => {
+    const ai = val.indexOf("@")
+    const gdi = val.split("").reduce((acc, char, i) => (char === "." ? i: acc), 0);
+    return ai > -1 && gdi > ai ? "" : "must be an email";
+}
 
 const useSytle = makeStyles(() => (
    {textField: {
@@ -62,7 +63,11 @@ const ContactModal = () => {
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
-    const [errors, setErrors] = useState([]);
+
+    const [errors1, setErrors1] = useState([]);
+    const [errors2, setErrors2] = useState([]);
+    const [errors3, setErrors3] = useState([]);
+    
 
     const handleSubmit = () => {
         if(verified === true){
@@ -80,10 +85,18 @@ const ContactModal = () => {
         }
     }
 
-   
-    const validate = (validations) => {
-        setErrors(validations.map(errorsFor => errorsFor(firstname)))
+    const validateFirstname = (validations) => {
+        setErrors1(validations.map(errorsFor => errorsFor(firstname)))
     }
+
+    const validateLastname = (validations) => {
+        setErrors2(validations.map(errorsFor => errorsFor(lastname)))
+    }
+
+    const validateEmail = (validations) => {
+        setErrors3(validations.map(errorsFor => errorsFor(email)))
+    }
+    
 
     const classes = useSytle();
 
@@ -145,17 +158,18 @@ const ContactModal = () => {
                                         <h2 style={{fontFamily: "Montserrat"}}> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
                                         <TextField 
                                             id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={classes.textField2}
-                                            size = "small" value={firstname} onChange = {(e) => setFirstname(e.target.value)} onClick = {() => validate([isRequired])}
-                                            helperText = {errors.length > 0 ? (<div className='has-error'>{errors.join(" ")}</div>): null}
+                                            size = "small" value={firstname} onChange = {(e) => setFirstname(e.target.value)} onBlur = {() => validateFirstname([isRequired])}
+                                            helperText = {errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}
                                         />
                                         <TextField 
                                             id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField2}
-                                            size = "small"
+                                            size = "small" value={lastname} onChange = {(e) => setLastname(e.target.value)} onBlur = {() => validateLastname([isRequired])}
+                                            helperText = {errors2.length > 0 ? (<div className='has-error'>{errors2.join(" ")}</div>): null}
                                         />
                                         <TextField 
                                             id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
-                                            // size = "small" value={email} onChange = {(e) => setEmail(e.target.email)} onClick = {() => validate([isRequired])}
-                                            // helperText = {errors.length > 0 ? (<div className='has-error'>{errors.join(" ")}</div>): null}
+                                            size = "small" value={email} onChange = {(e) => setEmail(e.target.value)} onBlur = {() => validateEmail([isEmail])}
+                                            helperText = {errors3.length > 0 ? (<div className='has-error'>{errors3.join(" ")}</div>): null}
                                         />
                                         <TextField 
                                             id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
