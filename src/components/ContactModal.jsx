@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 import { deepMemo } from '@hooks';
-import {Modal, Box, TextField} from '@mui/material'
+import {Modal, Box, TextField, InputBase, FormHelperText} from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import contact_modal from '@images/contact-modal.png';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -27,7 +27,6 @@ const useSytle = makeStyles(() => (
         marginTop: 0,
         fontWeight: 500, 
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
-        borderColor: "white",
   },
     textField2:{
         fontFamily: "montserrat",
@@ -156,26 +155,30 @@ const ContactModal = () => {
                                         <h1 style={{fontFamily: "Karla",color: "#fc0705", textAlign: "justify",}}>
                                             It's your turn to take action</h1>
                                         <h2 style={{fontFamily: "Montserrat"}}> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
-                                        <TextField 
+                                        <InputBase 
                                             id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={classes.textField2}
                                             size = "small" value={firstname} onChange = {(e) => setFirstname(e.target.value)} onBlur = {() => validateFirstname([isRequired])}
-                                            helperText = {errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}
+                                            // helperText = {errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}
                                         />
-                                        <TextField 
+                                        
+                                        <InputBase 
                                             id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField2}
                                             size = "small" value={lastname} onChange = {(e) => setLastname(e.target.value)} onBlur = {() => validateLastname([isRequired])}
-                                            helperText = {errors2.length > 0 ? (<div className='has-error'>{errors2.join(" ")}</div>): null}
+                                            // helperText = {errors2.length > 0 ? (<div className='has-error'>{errors2.join(" ")}</div>): null}
                                         />
-                                        <TextField 
+                                        <FormHelperText>{errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}
+                                                        {errors2.length > 0 ? (<div className='has-error'>{errors2.join(" ")}</div>): null}
+                                                        </FormHelperText>
+                                        <InputBase
                                             id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
                                             size = "small" value={email} onChange = {(e) => setEmail(e.target.value)} onBlur = {() => validateEmail([isEmail])}
                                             helperText = {errors3.length > 0 ? (<div className='has-error'>{errors3.join(" ")}</div>): null}
                                         />
-                                        <TextField 
+                                        <InputBase 
                                             id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
                                             size = "small"
                                         />
-                                        <TextField 
+                                        <InputBase
                                             id = "outlined-messages" label = "Messages" type = "text" placeholder='Messages' multiline rows={4} className={classes.textField}
                                         />
                                     </Box>
@@ -218,4 +221,4 @@ const ContactModal = () => {
     )
 }
 
-export default deepMemo(ContactModal);
+export default deepMemo(ContactModal); 

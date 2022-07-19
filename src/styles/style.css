@@ -144,6 +144,7 @@ footer {
 /*Contact Modal */
 
 .has-error {
+  background-color: white;
   color: red;
   font-size: 0.75rem;
   position: relative;
