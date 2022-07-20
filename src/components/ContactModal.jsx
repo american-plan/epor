@@ -24,7 +24,7 @@ const useSytle = makeStyles(() => (
         marginLeft: "auto",
         marginRight: "auto",
         paddingBottom: 0,
-        marginTop: 0,
+        marginTop: "1rem",
         fontWeight: 500, 
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
   },
@@ -32,9 +32,20 @@ const useSytle = makeStyles(() => (
         fontFamily: "montserrat",
         width: "47.6%",
         marginLeft: "auto",
+        marginRight: "0.375rem",
+        paddingBottom: 0,
+        marginTop: "1rem",
+        fontWeight: 500,
+        backgroundColor: "rgba(225, 131, 131, 0.33)", 
+        borderRadius: "10px",
+    },
+    textField3:{
+        fontFamily: "montserrat",
+        width: "47.6%",
+        marginLeft: "0.375rem",
         marginRight: "auto",
         paddingBottom: 0,
-        marginTop: 0,
+        marginTop: "1rem",
         fontWeight: 500,
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
         borderRadius: "10px",
@@ -131,7 +142,7 @@ const ContactModal = () => {
                                 left: "10%",
                             }}>   
                             <button className='btn' onClick={handleClose} style={{fontSize:30, }}>X</button>
-                            <button className='submit-btn' style={{top:'87%', left:'70%', fontSize:18, fontWeight:800}} 
+                            <button className='submit-btn' style={{top:'80%', left:'70%', fontSize:18, fontWeight:800}} 
                                 onClick={handleSubmit}>Submit</button>
                             <Box 
                                 component="form"
@@ -158,22 +169,20 @@ const ContactModal = () => {
                                         <InputBase 
                                             id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={classes.textField2}
                                             size = "small" value={firstname} onChange = {(e) => setFirstname(e.target.value)} onBlur = {() => validateFirstname([isRequired])}
-                                            // helperText = {errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}
                                         />
-                                        
                                         <InputBase 
-                                            id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField2}
+                                            id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField3}
                                             size = "small" value={lastname} onChange = {(e) => setLastname(e.target.value)} onBlur = {() => validateLastname([isRequired])}
-                                            // helperText = {errors2.length > 0 ? (<div className='has-error'>{errors2.join(" ")}</div>): null}
                                         />
-                                        <FormHelperText>{errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}
-                                                        {errors2.length > 0 ? (<div className='has-error'>{errors2.join(" ")}</div>): null}
-                                                        </FormHelperText>
+                                        <div className='helperText'>
+                                            <FormHelperText className = 'text1'>{errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}</FormHelperText>
+                                            <FormHelperText className = "text2">{errors2.length > 0 ? (<div className='has-error'>{errors2.join(" ")}</div>): null}</FormHelperText>
+                                        </div>
                                         <InputBase
                                             id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
                                             size = "small" value={email} onChange = {(e) => setEmail(e.target.value)} onBlur = {() => validateEmail([isEmail])}
-                                            helperText = {errors3.length > 0 ? (<div className='has-error'>{errors3.join(" ")}</div>): null}
                                         />
+                                        <FormHelperText>{errors3.length > 0 ? (<div className='has-error'>{errors3.join(" ")}</div>): null}</FormHelperText>
                                         <InputBase 
                                             id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
                                             size = "small"

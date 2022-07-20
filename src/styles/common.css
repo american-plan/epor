@@ -252,3 +252,19 @@ img {
   justify-self: start;
   align-self: flex-start;
 }
+
+.helperText{
+  display: grid;
+  grid-template-columns: [first] 50% [second] 50% [endcolumn];
+}
+
+.text1{
+  grid-column-start: first;
+  grid-column-end: second;
+}
+
+.text2{
+  grid-column-start: second;
+  grid-column-end: endcolumn;
+}
+
