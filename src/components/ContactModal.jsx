@@ -4,6 +4,7 @@ import {Modal, Box, TextField, InputBase, FormHelperText} from '@mui/material'
 import { makeStyles } from '@mui/styles';
 import contact_modal from '@images/contact-modal.png';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { ThemeContext } from '@emotion/react';
 
 const isRequired = (val) => {
     return val.length > 0 ? "" : "cannot be blank";
@@ -20,13 +21,14 @@ const useSytle = makeStyles(() => (
         fontFamily: "montserrat",
         width: "98%",
         height: "5%",
-        borderRadius: '10px',
+        borderRadius: "10px",
         marginLeft: "auto",
         marginRight: "auto",
         paddingBottom: 0,
-        marginTop: "1rem",
+        marginTop: "0.75rem",
         fontWeight: 500, 
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
+        paddingLeft: "0.25rem"
   },
     textField2:{
         fontFamily: "montserrat",
@@ -34,10 +36,11 @@ const useSytle = makeStyles(() => (
         marginLeft: "auto",
         marginRight: "0.375rem",
         paddingBottom: 0,
-        marginTop: "1rem",
+        marginTop: "0.75rem",
         fontWeight: 500,
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
         borderRadius: "10px",
+        paddingLeft: "0.25rem"
     },
     textField3:{
         fontFamily: "montserrat",
@@ -45,10 +48,11 @@ const useSytle = makeStyles(() => (
         marginLeft: "0.375rem",
         marginRight: "auto",
         paddingBottom: 0,
-        marginTop: "1rem",
+        marginTop: "0.75rem",
         fontWeight: 500,
         backgroundColor: "rgba(225, 131, 131, 0.33)", 
         borderRadius: "10px",
+        paddingLeft: "0.25rem"
     },
     reCaptcha: {
         top:"50%",
@@ -142,7 +146,7 @@ const ContactModal = () => {
                                 left: "10%",
                             }}>   
                             <button className='btn' onClick={handleClose} style={{fontSize:30, }}>X</button>
-                            <button className='submit-btn' style={{top:'80%', left:'70%', fontSize:18, fontWeight:800}} 
+                            <button className='submit-btn' style={{top:'77.5%', left:'70%', fontSize:18, fontWeight:800}} 
                                 onClick={handleSubmit}>Submit</button>
                             <Box 
                                 component="form"
@@ -168,11 +172,11 @@ const ContactModal = () => {
                                         <h2 style={{fontFamily: "Montserrat"}}> Join us in our commitment to create lasting solution to poverty, hunger, and social injustice </h2>         
                                         <InputBase 
                                             id= "outlined-first-name" label = "First Name*" type = "text" placeholder='First Name' className={classes.textField2}
-                                            size = "small" value={firstname} onChange = {(e) => setFirstname(e.target.value)} onBlur = {() => validateFirstname([isRequired])}
+                                            size = "normal" value={firstname} onChange = {(e) => setFirstname(e.target.value)} onBlur = {() => validateFirstname([isRequired])}
                                         />
                                         <InputBase 
                                             id = "outlined-last-name" label = "Last Name*" type = "text" placeholder='Last Name' className={classes.textField3}
-                                            size = "small" value={lastname} onChange = {(e) => setLastname(e.target.value)} onBlur = {() => validateLastname([isRequired])}
+                                            size = "normal" value={lastname} onChange = {(e) => setLastname(e.target.value)} onBlur = {() => validateLastname([isRequired])}
                                         />
                                         <div className='helperText'>
                                             <FormHelperText className = 'text1'>{errors1.length > 0 ? (<div className='has-error'>{errors1.join(" ")}</div>): null}</FormHelperText>
@@ -180,12 +184,12 @@ const ContactModal = () => {
                                         </div>
                                         <InputBase
                                             id = "outlined-email" label = "Email*" type = "text" placeholder='Email' className={classes.textField}
-                                            size = "small" value={email} onChange = {(e) => setEmail(e.target.value)} onBlur = {() => validateEmail([isEmail])}
+                                            size = "normal" value={email} onChange = {(e) => setEmail(e.target.value)} onBlur = {() => validateEmail([isEmail])}
                                         />
                                         <FormHelperText>{errors3.length > 0 ? (<div className='has-error'>{errors3.join(" ")}</div>): null}</FormHelperText>
                                         <InputBase 
                                             id = "outlined-subjects" label = "Subjects" type = "text" placeholder='Subjects' className = {classes.textField}
-                                            size = "small"
+                                            size = "normal"
                                         />
                                         <InputBase
                                             id = "outlined-messages" label = "Messages" type = "text" placeholder='Messages' multiline rows={4} className={classes.textField}
