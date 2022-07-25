@@ -13,13 +13,13 @@ const HomepageBanner = ({}) => {
     }
 
     const number = {
-        fontSize: 36,
+        fontSize: "2.25em",
         fontFamily: 'Montserrat',
         fontWeight: 100,
     }
 
     const smallTitle = {
-        fontSize: 24,
+        fontSize: "1.5em",
         fontFamily: 'Montserrat',
         fontWeight: 600,
         alignContent:"center",
@@ -28,7 +28,7 @@ const HomepageBanner = ({}) => {
     }
 
     const content = {
-        fontSize: 14,
+        fontSize: "0.875em",
         fontFamily: "Montserrat",
         fontWeight: 100,
         alignContent:"center",

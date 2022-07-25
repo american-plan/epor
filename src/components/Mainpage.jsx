@@ -47,7 +47,7 @@ const itemStyle = makeStyles(()=> ({
 
     itemContent: {
         fontFamily: "Karla", 
-        fontSize: 18, 
+        fontSize: "1.125em", 
         fontWeight: "bold", 
     },
 
@@ -65,11 +65,10 @@ const itemStyle = makeStyles(()=> ({
     circleContent: {
         color: "#cf1111",
         fontWeight: "bold",
-        fontSize: 24,
+        fontSize: "1.5em",
         fontFamily: "Roboto",
     }
 }))
-
 
 
 const mainpage = () => {
@@ -191,7 +190,6 @@ const mainpage = () => {
                     </Box>
                 </Box>
             </div>
-            
         </Main>
     );
 }

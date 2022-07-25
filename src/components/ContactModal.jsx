@@ -146,7 +146,7 @@ const ContactModal = () => {
                                 left: "10%",
                             }}>   
                             <button className='btn' onClick={handleClose} style={{fontSize:30, }}>X</button>
-                            <button className='submit-btn' style={{top:'77.5%', left:'70%', fontSize:18, fontWeight:800}} 
+                            <button className='submit-btn' style={{top:'78.5%', left:'70%', fontSize:18, fontWeight:800}} 
                                 onClick={handleSubmit}>Submit</button>
                             <Box 
                                 component="form"
